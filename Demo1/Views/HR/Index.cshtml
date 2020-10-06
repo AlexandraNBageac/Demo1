@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Employee>
+
+<h1 style="background: #ffb302;color: #333333">All Employees</h1>
+<a asp-action="Create" class="btn btn-secondary">Create a User</a>
+
+<table >
+    <tr><th>First Name</th><th>Surname</th><th>Email</th><th>Monthly Choice</th></tr>
+    @foreach (Employee user in Model)
+    {
+        <tr>
+            
+            <td>@user.FirstName</td>
+            <td>@user.Surname</td>
+            <td>@user.Email</td>
+            <td>Some choice</td>
+        </tr>
+    }
+</table>
