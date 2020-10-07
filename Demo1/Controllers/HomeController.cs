@@ -43,7 +43,7 @@ namespace Demo1.Controllers
 
         public async Task<IActionResult> CreateDefaultHR()
         {
-            if (usedDefaultHR==false)
+            if (usedDefaultHR==false && usedDefaultRoles==true)
             {
             var user = new Employee { FirstName = "Henry", Surname = "Cavill", Email = "HR@somecompany.com", EmailConfirmed = true, UserName = "HR@somecompany.com" };
             IdentityResult result1 = await _userManager.CreateAsync(user, "Hr@1234");
